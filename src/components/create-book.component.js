@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class CreateExercise extends Component {
+export default class CreateBook extends Component {
   constructor(props) {
     super(props);
 
@@ -12,7 +12,7 @@ export default class CreateExercise extends Component {
 
     this.state = {
       title: '',
-      author: 0,
+      author: '',
       genre: ''
     }
   }
@@ -65,7 +65,7 @@ export default class CreateExercise extends Component {
               />
         </div>
         <div className="form-group">
-          <label>author: </label>Name
+          <label>Author: </label>Name
           <input 
               type="text" 
               className="form-control"
@@ -74,7 +74,7 @@ export default class CreateExercise extends Component {
               />
         </div>
         <div className="form-group">
-          <label>genre: </label>Genre
+          <label>Genre: </label>Genre
           <input 
               type="text" 
               className="form-control"
@@ -91,20 +91,3 @@ export default class CreateExercise extends Component {
   }
 }
 
-
-
-
-//   componentDidMount() {
-//     axios.get('http://localhost:5000/users/')
-//       .then(response => {
-//         if (response.data.length > 0) {
-//           this.setState({
-//             users: response.data.map(user => user.username),
-//             username: response.data[0].username
-//           })
-//         }
-//       })
-//       .catch((error) => {
-//         console.log(error);
-//       })
-//   }

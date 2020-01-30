@@ -10,6 +10,12 @@ const userSchema = new Schema({
         trim: true,
         minLength: 3
     },
+    password: {
+        type:String,
+        required: true,
+        trim: true,
+        minLength: 3
+    },
     favorites: [
         {type: mongoose.Schema.Types.ObjectId,ref:'Book'}
     ]
