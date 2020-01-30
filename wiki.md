@@ -17,22 +17,16 @@ This wiki is to document the history of this project in order to document issues
 - Will also need a way to keep track of userNotes pertaining to each book - something like a note table containing the id/foreign key of it's user and it's book - a note belongs to a book through user - like a one to many through relationship.
 - Haven't worked with nonrelational databases before so I'm guessing there's a specific nonrelational way to do this
 
+## Re: How to mimic a join table in MongoDB
+- It seems that we can just reference id's here, i.e. a book can keep track of which user has favorited it by keeping an array of user id's (object id's in Mongo)
+- I'm unsure of how this would scale if there were say a million users
+- Perhaps a favorites table
+- Will have to experiment with this functionality and dive deeper into Mongo
+
 ## API Testing
 - Used Insomnia to test the API/Backend and found it much more pleasant than postman, will be using this tool from now on
 
-<!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!** -->
 
 
 
